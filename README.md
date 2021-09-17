@@ -3,22 +3,16 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+1. git clone https://github.com/hamza350/batting_average.git
 
-* Ruby version
+# In project directory
+2. bundle install
+3. rails db:create
+4. rails db:migrate
 
-* System dependencies
+# Run the task for uploading team data for this team.csv named file should be in project directory
+5. rake import_csv:data
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+# Start the server 
+6. rails s
 * ...
