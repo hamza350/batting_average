@@ -5,9 +5,7 @@ class CsvImportsController < ApplicationController
 	end
 
 	def create
-		debugger
 		@csv = CsvImport.import(params[:file])
-		debugger
 		session[:year] = params[:year]
 		session[:team] = params[:team]
 		if @csv
@@ -18,7 +16,6 @@ class CsvImportsController < ApplicationController
 	end
 
 	def show
-		debugger
 		@data_total = []
 		if session[:year].present? && session[:team].empty?
 			@data = CsvImport.all.group(:player_id).where(year_id: session[:year])

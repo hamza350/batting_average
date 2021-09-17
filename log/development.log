@@ -6321,3 +6321,105 @@ Processing by CsvImportsController#show as HTML
 Completed 200 OK in 669ms (Views: 18.6ms | ActiveRecord: 0.7ms | Allocations: 8739)
 
 
+Started GET "/csv_imports" for ::1 at 2021-09-17 23:23:03 +0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CsvImportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering csv_imports/index.html.erb within layouts/application
+  Rendered csv_imports/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 6006)
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 8605)
+
+
+Started GET "/csv_imports" for ::1 at 2021-09-17 23:23:04 +0500
+Processing by CsvImportsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering csv_imports/index.html.erb within layouts/application
+  Rendered csv_imports/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 571)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 3507)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.0ms | Allocations: 3891)
+
+
+Started POST "/csv_imports" for ::1 at 2021-09-17 23:25:48 +0500
+Processing by CsvImportsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "file"=>#<ActionDispatch::Http::UploadedFile:0x000055f64b04a230 @tempfile=#<Tempfile:/tmp/RackMultipart20210917-10941-1dxval4.csv>, @original_filename="batting.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"batting.csv\"\r\nContent-Type: text/csv\r\n">, "team"=>"2", "year"=>"", "button"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.5ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 1], ["year_id", 2017], ["stint", 12], ["team_id", 1], ["ab", 20], ["h", 500], ["created_at", "2021-09-17 18:26:01.262993"], ["updated_at", "2021-09-17 18:26:01.262993"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.3ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["year_id", 2018], ["stint", 13], ["team_id", 2], ["ab", 31], ["h", 600], ["created_at", "2021-09-17 18:26:01.285372"], ["updated_at", "2021-09-17 18:26:01.285372"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.3ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 3], ["year_id", 2019], ["stint", 14], ["team_id", 3], ["ab", 42], ["h", 700], ["created_at", "2021-09-17 18:26:01.302050"], ["updated_at", "2021-09-17 18:26:01.302050"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.3ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 4], ["year_id", 2020], ["stint", 15], ["team_id", 4], ["ab", 53], ["h", 800], ["created_at", "2021-09-17 18:26:01.315927"], ["updated_at", "2021-09-17 18:26:01.315927"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.3ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 5], ["year_id", 2021], ["stint", 16], ["team_id", 5], ["ab", 14], ["h", 150], ["created_at", "2021-09-17 18:26:01.333805"], ["updated_at", "2021-09-17 18:26:01.333805"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (1.0ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["year_id", 2016], ["stint", 17], ["team_id", 3], ["ab", 15], ["h", 160], ["created_at", "2021-09-17 18:26:01.362530"], ["updated_at", "2021-09-17 18:26:01.362530"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (1.0ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 3], ["year_id", 2018], ["stint", 18], ["team_id", 1], ["ab", 16], ["h", 170], ["created_at", "2021-09-17 18:26:01.410563"], ["updated_at", "2021-09-17 18:26:01.410563"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.4ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 7], ["year_id", 2018], ["stint", 18], ["team_id", 1], ["ab", 16], ["h", 170], ["created_at", "2021-09-17 18:26:01.455715"], ["updated_at", "2021-09-17 18:26:01.455715"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mCsvImport Create (0.4ms)[0m  [1m[32mINSERT INTO "csv_imports" ("player_id", "year_id", "stint", "team_id", "ab", "h", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["player_id", 2], ["year_id", 2020], ["stint", 18], ["team_id", 2], ["ab", 16], ["h", 170], ["created_at", "2021-09-17 18:26:01.473124"], ["updated_at", "2021-09-17 18:26:01.473124"]]
+  ↳ app/models/csv_import.rb:10:in `block in import'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/csv_import.rb:10:in `block in import'
+Redirected to http://localhost:3000/csv_imports/208
+Completed 302 Found in 12966ms (ActiveRecord: 80.6ms | Allocations: 133196)
+
+
+Started GET "/csv_imports/208" for ::1 at 2021-09-17 23:26:01 +0500
+Processing by CsvImportsController#show as HTML
+  Parameters: {"id"=>"208"}
+  [1m[36mCsvImport Load (1.6ms)[0m  [1m[34mSELECT "csv_imports".* FROM "csv_imports" WHERE "csv_imports"."team_id" = ? GROUP BY "csv_imports"."player_id"[0m  [["team_id", 2]]
+  ↳ app/controllers/csv_imports_controller.rb:32:in `show'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "csv_imports"."team_id" FROM "csv_imports" WHERE "csv_imports"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/controllers/csv_imports_controller.rb:33:in `block in show'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "teams"."team_name" FROM "teams" WHERE "teams"."id" IN (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["id", 3], ["id", 2], ["id", 2], ["id", 3], ["id", 2], ["id", 2], ["id", 3], ["id", 2]]
+  ↳ app/controllers/csv_imports_controller.rb:34:in `block in show'
+  [1m[36mCsvImport Load (1.6ms)[0m  [1m[34mSELECT "csv_imports".* FROM "csv_imports" WHERE "csv_imports"."player_id" = ?[0m  [["player_id", 2]]
+  ↳ app/controllers/csv_imports_controller.rb:39:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering csv_imports/show.html.erb within layouts/application
+  Rendered csv_imports/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 3359)
+Completed 200 OK in 630ms (Views: 47.5ms | ActiveRecord: 6.7ms | Allocations: 9462)
+
+
