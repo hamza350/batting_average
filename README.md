@@ -1,8 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
 1. git clone https://github.com/hamza350/batting_average.git
 
 # In project directory
